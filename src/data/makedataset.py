@@ -33,7 +33,6 @@ def get_signal_data(path):
 
     
         wcd = stations.iloc[0] #select the first station 
-        time = 
         # Assuming y is a list initialized earlier in your code
         y.append(wcd.pmt1)
-    return y, time
+    return y
