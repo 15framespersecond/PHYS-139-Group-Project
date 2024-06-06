@@ -1,5 +1,8 @@
 *.csv
 *.json
 .venv/
-data/*
-notebooks/*
+data/raw/*
+data/temp/*
+data/out/*
+notebooks/dataDEv.ipynb
+notebooks/__pycache__/
