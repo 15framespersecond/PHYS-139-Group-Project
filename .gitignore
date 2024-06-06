@@ -1,8 +1,8 @@
 *.csv
 *.json
 .venv/
-data/raw/*
-data/temp/*
-data/out/*
+data/raw/data*
+data/temp/signal*
+data/out/out*
 notebooks/dataDEv.ipynb
 notebooks/__pycache__/

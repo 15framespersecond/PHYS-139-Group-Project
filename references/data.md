@@ -1,3 +1,5 @@
 # Data References
 
 Data comes from [Auger Open Data](https://opendata.auger.org/analysis.php#nb_espec) from the surface detection(SD) events in the form of .json files which can be downloaded using the ```download_data.sh``` bash script. We are only interested in the trace signals so the function ```get_signal_data()``` in ```makedataset.py``` extracts one of the photomultiplier tube(PMT) traces for each event from one station. This limits the number of events for now, but is still about 26000 events exported to a .csv in data/temp/. The PMT traces are in terms of VEM(Vertical Equivalent Muon) which can be converted to eV using the slope of the correlation Plot from the [Energy Calibration](https://www.kaggle.com/code/augeropendata/energy-calibration) notebook provided by Auger Open Data.
+
+data folders are kept empty due to large file sizes, outputs and temps can be found on [google drive](https://drive.google.com/drive/folders/1D7jJge1JM2D8NpsO8eHz7EmWCsZIfSfV?usp=drive_link)
