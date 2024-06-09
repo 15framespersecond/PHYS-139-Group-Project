@@ -51,7 +51,7 @@ def VEM_to_eV(VEM):
     '''
     slope = 45.14153715340955
     intercept = 2.3400270892667407
-    return ((VEM - intercept) / slope)/100
+    return ((VEM - intercept) / slope)/10
 
 
 def generate_noise(length, alpha):
@@ -69,13 +69,4 @@ def bandpass_filter(data, lowcut, highcut, fs, order=5):
     y = filtfilt(b, a, data)
     return y / 10
 
-y, t, data = get_signal_data('/home/tuckyg/Documents/spring2024/phys139/PHYS-139-Group-Project')
 
-data_to_save = {
-    "Time": t,
-    "Signal": y
-}
-
-df = pd.DataFrame(data_to_save)
-
-df.to_csv("../../data/temp/signal_time_data.csv", index=False)
