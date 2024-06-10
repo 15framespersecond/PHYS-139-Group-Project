@@ -25,7 +25,6 @@ def get_signal_data(path):
     files = os.listdir(path)
     binsize = 0.025
     y = []
-    t=[]
     data_to_save=[]
     for f in files:
         data = import_file(path+f)
@@ -41,9 +40,8 @@ def get_signal_data(path):
         # Assuming y is a list initialized earlier in your code
         y.append(wcd.pmt1)
         time = [np.arange(len(wcd[f'pmt{i + 1}'])) * binsize for i in range(3)]
-        t.append(time[0])
-        data_to_save.append([time,wcd.pmt1])
-    return y, t, data_to_save
+        data_to_save.append([wcd.pmt1])
+    return y, data_to_save
 
 def VEM_to_eV(VEM):
     VEM = np.array(VEM)
